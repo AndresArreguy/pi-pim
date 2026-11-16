@@ -34,7 +34,10 @@
     "README.md",
     "README.es.md",
     "CHANGELOG.md",
-    "LICENSE"
+    "LICENSE",
+    "CONTRIBUTING.md",
+    "CODE_OF_CONDUCT.md",
+    "SECURITY.md"
   ],
   "scripts": {
     "check": "node --experimental-strip-types --check index.ts"

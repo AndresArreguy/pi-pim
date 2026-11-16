@@ -125,6 +125,10 @@ pi install .       # carga el paquete local
 
 Editá `index.ts`, corré `/reload` en Pi y probá en una sesión fullscreen.
 
+## Contribuir
+
+Las contribuciones son bienvenidas. Leé [CONTRIBUTING.md](CONTRIBUTING.md) y el [Código de Conducta](CODE_OF_CONDUCT.md). Issues y PRs pueden ser en inglés o español. Reportes de seguridad: [SECURITY.md](SECURITY.md).
+
 ## ⭐ Apoyo
 
 Si Pim te hace sentir Pi como en casa, dejale una estrella al repo:

@@ -125,6 +125,10 @@ pi install .       # load the local package
 
 Edit `index.ts`, run `/reload` in Pi, and test in a fullscreen session.
 
+## Contributing
+
+Contributions are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) and the [Code of Conduct](CODE_OF_CONDUCT.md). Issues and PRs can be in English or Spanish. Security reports: [SECURITY.md](SECURITY.md).
+
 ## ⭐ Support
 
 If Pim makes Pi feel like home, please star the repo:

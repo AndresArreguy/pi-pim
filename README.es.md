@@ -14,6 +14,8 @@
 
 > ⭐ Si Pim te hace sentir Pi como en casa, [dejale una estrella al repo](https://github.com/AndresArreguy/pi-pim). Ayuda a que otros usuarios de Vim lo encuentren.
 
+[![Pi package](https://img.shields.io/badge/Pi-package-8A2BE2)](https://pi.dev/packages)
+
 **Pim = Pi + Vim.** Un editor modal para Pi: escribís en insert mode, apretás
 `Esc` para entrar en normal mode y usás `j`/`k` para scrollear el transcript del
 chat — no el historial de prompts.
@@ -130,6 +132,10 @@ Si Pim te hace sentir Pi como en casa, dejale una estrella al repo:
 [![GitHub stars](https://img.shields.io/github/stars/AndresArreguy/pi-pim?style=social)](https://github.com/AndresArreguy/pi-pim/stargazers)
 
 Issues y pull requests son bienvenidos.
+
+## Créditos
+
+Construido sobre [Pi](https://github.com/earendil-works/pi) por el equipo de Pi.
 
 ## Licencia
 

@@ -1,0 +1,61 @@
+{
+  "name": "pi-pim",
+  "version": "1.0.0",
+  "description": "Pim — nvim-style modal editing and chat navigation for Pi.",
+  "license": "MIT",
+  "type": "module",
+  "keywords": [
+    "pi-package",
+    "pi",
+    "vim",
+    "nvim",
+    "modal",
+    "editor",
+    "tui"
+  ],
+  "author": {
+    "name": "Andres Arreguy",
+    "url": "https://github.com/AndresArreguy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndresArreguy/pi-pim.git"
+  },
+  "homepage": "https://github.com/AndresArreguy/pi-pim#readme",
+  "bugs": {
+    "url": "https://github.com/AndresArreguy/pi-pim/issues"
+  },
+  "engines": {
+    "node": ">=22.6.0"
+  },
+  "files": [
+    "index.ts",
+    "assets/",
+    "README.md",
+    "README.es.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "check": "node --experimental-strip-types --check index.ts"
+  },
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ],
+    "image": "./assets/banner-v2.png",
+    "changelogPath": "./CHANGELOG.md"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-tui": "*"
+  },
+  "peerDependenciesMeta": {
+    "@earendil-works/pi-coding-agent": {
+      "optional": true
+    },
+    "@earendil-works/pi-tui": {
+      "optional": true
+    }
+  }
+}

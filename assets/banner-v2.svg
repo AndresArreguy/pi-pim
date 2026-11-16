@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-label="Pim - nvim-style navigation in Pi">
+  <defs>
+    <linearGradient id="pimGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#e48a7a"/>
+      <stop offset="0.45" stop-color="#eab65d"/>
+      <stop offset="1" stop-color="#2dd4bf"/>
+    </linearGradient>
+    <linearGradient id="barGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#e48a7a"/>
+      <stop offset="0.35" stop-color="#eab65d"/>
+      <stop offset="0.7" stop-color="#2dd4bf"/>
+      <stop offset="1" stop-color="#c084fc"/>
+    </linearGradient>
+    <clipPath id="card">
+      <rect width="1200" height="320" rx="24"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#card)">
+    <rect width="1200" height="320" rx="24" fill="#0b1020"/>
+    <rect x="0.5" y="0.5" width="1199" height="319" rx="24" fill="none" stroke="#1e293b"/>
+
+    <circle cx="120" cy="40" r="150" fill="#2dd4bf" opacity="0.07"/>
+    <circle cx="520" cy="330" r="190" fill="#c084fc" opacity="0.05"/>
+    <circle cx="1140" cy="20" r="120" fill="#eab65d" opacity="0.05"/>
+
+    <text x="78" y="178" font-family="'Segoe UI','Inter','Helvetica Neue',Arial,sans-serif" font-size="150" font-weight="700" letter-spacing="-3">
+      <tspan fill="url(#pimGrad)">π</tspan><tspan fill="#e2e8f0">m</tspan>
+    </text>
+    <text x="82" y="224" font-family="'Segoe UI','Inter','Helvetica Neue',Arial,sans-serif" font-size="25" fill="#94a3b8">nvim-style navigation in Pi</text>
+    <rect x="82" y="246" width="430" height="7" rx="3.5" fill="url(#barGrad)"/>
+
+    <g font-family="'Segoe UI','Inter','Helvetica Neue',Arial,sans-serif" font-size="14">
+      <rect x="82" y="268" width="108" height="30" rx="15" fill="#111827" stroke="#1e293b"/>
+      <text x="136" y="288" text-anchor="middle" fill="#facc15">Esc normal</text>
+      <rect x="200" y="268" width="96" height="30" rx="15" fill="#111827" stroke="#1e293b"/>
+      <text x="248" y="288" text-anchor="middle" fill="#2dd4bf">i insert</text>
+      <rect x="306" y="268" width="112" height="30" rx="15" fill="#111827" stroke="#1e293b"/>
+      <text x="362" y="288" text-anchor="middle" fill="#fb923c">j/k scroll</text>
+      <rect x="428" y="268" width="120" height="30" rx="15" fill="#111827" stroke="#1e293b"/>
+      <text x="488" y="288" text-anchor="middle" fill="#c084fc">gg/G top</text>
+    </g>
+
+    <rect x="800" y="46" width="330" height="228" rx="14" fill="#0c0a07" stroke="#facc15" stroke-opacity="0.85"/>
+    <circle cx="820" cy="66" r="5" fill="#fb7185"/>
+    <circle cx="836" cy="66" r="5" fill="#facc15"/>
+    <circle cx="852" cy="66" r="5" fill="#7ee787"/>
+    <text x="820" y="94" font-family="'Consolas','SFMono-Regular',Menlo,monospace" font-size="12" fill="#64748b">~/project</text>
+    <text x="1086" y="94" text-anchor="end" font-family="'Consolas','SFMono-Regular',Menlo,monospace" font-size="12" fill="#facc15">NORMAL</text>
+    <line x1="820" y1="104" x2="1110" y2="104" stroke="#1e293b"/>
+    <text x="820" y="132" font-family="'Consolas','SFMono-Regular',Menlo,monospace" font-size="13"><tspan fill="#c084fc">const</tspan><tspan fill="#e2e8f0"> answer = </tspan><tspan fill="#fb923c">42</tspan><tspan fill="#e2e8f0">;</tspan><tspan fill="#7ee787">█</tspan></text>
+    <text x="820" y="158" font-family="'Consolas','SFMono-Regular',Menlo,monospace" font-size="13" fill="#64748b">// j/k scrolls the chat</text>
+    <text x="820" y="182" font-family="'Consolas','SFMono-Regular',Menlo,monospace" font-size="13" fill="#64748b">// i returns to insert</text>
+    <line x1="820" y1="210" x2="1110" y2="210" stroke="#1e293b"/>
+    <text x="820" y="238" font-family="'Consolas','SFMono-Regular',Menlo,monospace" font-size="12" fill="#facc15">-- NORMAL --</text>
+    <text x="940" y="238" font-family="'Consolas','SFMono-Regular',Menlo,monospace" font-size="11" fill="#64748b">j/k scroll · i insert</text>
+    <text x="800" y="300" font-family="'Segoe UI','Inter','Helvetica Neue',Arial,sans-serif" font-size="12" fill="#64748b">github.com/AndresArreguy/pi-pim</text>
+  </g>
+</svg>

@@ -1,0 +1,59 @@
+name: Release
+
+# Trusted Publishing (OIDC) — no NPM_TOKEN secret required.
+# Configure once on npmjs.com:
+#   Package → Settings → Trusted Publisher → GitHub Actions
+#   Owner: AndresArreguy · Repository: pi-pim · Workflow: release.yml · Environment: (empty)
+#
+# The trusted publisher lives on the package settings page, which only exists once
+# the package is on the registry. The first publish is therefore manual:
+#   npm login && npm publish --access public
+#
+# After that, push a tag that matches package.json (e.g. v1.1.0) or use the
+# "Run workflow" button with the version to publish.
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Version to publish (must match package.json)
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - name: Upgrade npm for Trusted Publishing (OIDC)
+        run: npm install -g npm@^11
+
+      - name: Verify version matches package.json
+        run: |
+          EXPECTED="${{ inputs.version }}"
+          if [ -z "$EXPECTED" ]; then
+            EXPECTED="${GITHUB_REF_NAME#v}"
+          fi
+          PKG="$(node -p "require('./package.json').version")"
+          if [ "$EXPECTED" != "$PKG" ]; then
+            echo "Version $EXPECTED does not match package.json version $PKG" >&2
+            exit 1
+          fi
+
+      - name: Check sources
+        run: npm run check
+
+      # Authentication comes from the GitHub OIDC token (id-token: write).
+      - name: Publish to npm
+        run: npm publish --provenance --access public
